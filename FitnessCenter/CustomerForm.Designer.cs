@@ -79,6 +79,7 @@
             this.customerLabel = new System.Windows.Forms.Label();
             this.showTrainersList = new System.Windows.Forms.Button();
             this.addCoachButton = new System.Windows.Forms.Button();
+            this.stopButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clientdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -607,12 +608,25 @@
             this.addCoachButton.UseVisualStyleBackColor = false;
             this.addCoachButton.Click += new System.EventHandler(this.addCoachButton_Click_1);
             // 
+            // stopButton
+            // 
+            this.stopButton.BackColor = System.Drawing.Color.Salmon;
+            this.stopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stopButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.stopButton.Location = new System.Drawing.Point(216, 750);
+            this.stopButton.Name = "stopButton";
+            this.stopButton.Size = new System.Drawing.Size(278, 61);
+            this.stopButton.TabIndex = 113;
+            this.stopButton.Text = "Перестать заниматься у тренера";
+            this.stopButton.UseVisualStyleBackColor = false;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1573, 826);
+            this.Controls.Add(this.stopButton);
             this.Controls.Add(this.addCoachButton);
             this.Controls.Add(this.showTrainersList);
             this.Controls.Add(this.customerLabel);
@@ -706,5 +720,6 @@
         private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.Button showTrainersList;
         private System.Windows.Forms.Button addCoachButton;
+        private System.Windows.Forms.Button stopButton;
     }
 }
