@@ -268,5 +268,10 @@ namespace FitnessCenter
             Clear(false);
             customerLabel.Text = "Отобранные клиенты:";
         }
+
+        private void showTrainersList_Click(object sender, EventArgs e)
+        {
+            FillTrainerDataGridView();
+        }
     }
 }

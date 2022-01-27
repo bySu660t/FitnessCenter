@@ -77,6 +77,7 @@
             this.passportno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchButton = new System.Windows.Forms.Button();
             this.customerLabel = new System.Windows.Forms.Label();
+            this.showTrainersList = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clientdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -580,12 +581,25 @@
             this.customerLabel.TabIndex = 109;
             this.customerLabel.Text = "Все клиенты:";
             // 
+            // showTrainersList
+            // 
+            this.showTrainersList.BackColor = System.Drawing.Color.DarkBlue;
+            this.showTrainersList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.showTrainersList.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.showTrainersList.Location = new System.Drawing.Point(65, 671);
+            this.showTrainersList.Name = "showTrainersList";
+            this.showTrainersList.Size = new System.Drawing.Size(285, 61);
+            this.showTrainersList.TabIndex = 111;
+            this.showTrainersList.Text = "Весь список тренеров";
+            this.showTrainersList.UseVisualStyleBackColor = false;
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1573, 826);
+            this.Controls.Add(this.showTrainersList);
             this.Controls.Add(this.customerLabel);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.trainersDataGridView);
@@ -675,5 +689,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passportno;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label customerLabel;
+        private System.Windows.Forms.Button showTrainersList;
     }
 }
