@@ -78,6 +78,7 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.customerLabel = new System.Windows.Forms.Label();
             this.showTrainersList = new System.Windows.Forms.Button();
+            this.addCoachButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.clientdataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trainersDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -593,12 +594,26 @@
             this.showTrainersList.Text = "Весь список тренеров";
             this.showTrainersList.UseVisualStyleBackColor = false;
             // 
+            // addCoachButton
+            // 
+            this.addCoachButton.BackColor = System.Drawing.Color.Indigo;
+            this.addCoachButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addCoachButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addCoachButton.Location = new System.Drawing.Point(358, 671);
+            this.addCoachButton.Name = "addCoachButton";
+            this.addCoachButton.Size = new System.Drawing.Size(278, 61);
+            this.addCoachButton.TabIndex = 112;
+            this.addCoachButton.Text = "Заниматься у тренера";
+            this.addCoachButton.UseVisualStyleBackColor = false;
+            this.addCoachButton.Click += new System.EventHandler(this.addCoachButton_Click_1);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1573, 826);
+            this.Controls.Add(this.addCoachButton);
             this.Controls.Add(this.showTrainersList);
             this.Controls.Add(this.customerLabel);
             this.Controls.Add(this.searchButton);
@@ -690,5 +705,6 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Label customerLabel;
         private System.Windows.Forms.Button showTrainersList;
+        private System.Windows.Forms.Button addCoachButton;
     }
 }

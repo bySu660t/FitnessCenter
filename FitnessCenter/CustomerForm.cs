@@ -273,5 +273,45 @@ namespace FitnessCenter
         {
             FillTrainerDataGridView();
         }
+
+        private void addCoachButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addCoachButton_Click_1(object sender, EventArgs e)
+        {
+            int cust_id, train_id;
+            if (clientdataGridView.CurrentRow.Index != -1)
+            {
+                cust_id = Convert.ToInt32(clientdataGridView.CurrentRow.Cells["id_2"].Value);
+                if (trainersDataGridView.CurrentRow.Index != -1)
+                {
+                    train_id = Convert.ToInt32(trainersDataGridView.CurrentRow.Cells["id"].Value);
+                    using (GymDBEntities db = new GymDBEntities())
+                    {
+                        var str = db.Schedule.Where(x => x.trainer_id == train_id && x.customer_id == cust_id && x.enddate == null).FirstOrDefault();
+                        if (str == null)
+                        {
+                            db.Database.ExecuteSqlCommand($"insert into schedule values ({train_id},{cust_id},getdate(),null)");
+                            MessageBox.Show("Запись успешно создана!", "Успешная операция", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear(true);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Занятия уже проводятся! Повторная запись невозможна до завершения текущих сеансов.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Не выбран ни один тренер из списка. Повторите выбор!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Не выбран ни один клиент из списка. Повторите выбор!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
